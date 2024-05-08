@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Permanent+Marker&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap');/* --------------------------------------------------- FONTS--------------------------------------------------- */
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .oswald-light {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .oswald-medium {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .oswald-bold {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+h2 {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+}
+
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    line-height: 26px;
+}
+
+h3 {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+}
+
+button {
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+button:focus,
+button:hover {
+  opacity: .8;
+}
+
+.blogPostDate, 
+figcaption {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* --------------------------------------------------- HERO IMAGE/TEXT --------------------------------------------------- */
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  clip-path: polygon(100% 0%, 100% 0, 100% 35%, 100% 100%, 100% 100%, 70% 97%, 26% 92%, 0 89%, 0% 35%, 0 0);
+  filter: brightness(70%)
+}
+
+.hero {
+  position: relative;
+  top: -60px;
+  z-index: 100;
+}
+
+.heroText {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust positioning to exact center */
+  color: white; /* Text color */
+  max-width: 85%;
+  font-size: 1.5rem; /* Adjust size as needed */
+  text-align: center; /* Ensure text is centered */
+  z-index: 201; /* Above the image */
+  width: 100%; /* Ensure the text can be centered in the hero area */
+  cursor: pointer;
+  opacity: 80%;
+
+}
+
+.heroText:hover{
+  opacity: .9;
+}
+
+/* --------------------------------------------------- CONTAINER --------------------------------------------------- */
+.container {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container img{
+    padding: 1rem 0;
+}
+
+
+
+/* --------------------------------------------------- BLOG POST --------------------------------------------------- */
+.blogPost {
+  margin-bottom: 4rem;
+}
+
+.blogPost .readMoreButton {
+    background-color: white;
+    border: solid black 1px; 
+    text-transform: uppercase;
+    border-radius: 5px; 
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px; 
+    width: 45%;
+    color: black;
+  }
+
+  .blogPost .readMoreButton:hover {
+    opacity: .4;
+  }
+  
+  .postBreak {
+    border-bottom: solid rgb(154, 154, 154) .5px;
+  }
+  
+  .blogPost {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .blogPost button {
+    margin: 15px 0;
+  }
+
+  .blogPostsHeader {
+    margin: 5rem auto 3rem auto;  
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  figcaption {
+    text-align: center;
+  }

@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Permanent+Marker&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap');/* --------------------------------------------------- FONTS--------------------------------------------------- */
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .oswald-light {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .oswald-medium {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .oswald-bold {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+header > h1 {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.heroText {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+.navbar > div {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 15px;
+}
+
+/* --------------------------------------------------- HEADER--------------------------------------------------- */
+header {
+    text-align: center;
+    position: relative;
+    z-index: 102;
+    padding: 1.5rem 0 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.socialContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* --------------------------------------------------- NAV BAR --------------------------------------------------- */
+
+.navbar {
+    position: sticky;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.658);
+    z-index: 101;
+    color: white;
+    font-size: 14px;
+    font-weight: 200;
+    width: 100%;
+}
+
+.navbar > div {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center content of divs */;
+}
+
+.navbar > div > img{
+    padding-right: 2rem;
+}
+
+.navbar > div > span,
+.navbar > div > img,
+.socialContainer > img {
+    cursor: pointer;
+}
+
+.navbar > div:last-child {
+    justify-content: flex-end; /* Align last child (search icon) to the right */
+}
+
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    clip-path: polygon(100% 0%, 100% 0, 100% 35%, 100% 100%, 100% 100%, 70% 97%, 26% 92%, 0 89%, 0% 35%, 0 0);
+}
+
+.hero {
+    position: relative;
+    top: -60px;
+    z-index: 100;
+}
+
+.heroText {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning to exact center */
+    color: white; /* Text color */
+    max-width: 85%;
+    font-size: 1.5rem; /* Adjust size as needed */
+    text-align: center; /* Ensure text is centered */
+    z-index: 201; /* Above the image */
+    width: 100%; /* Ensure the text can be centered in the hero area */
+    cursor: pointer;
+
+}
+
+.heroText:hover{
+    opacity: .9;
+}
+
+/* --------------------------------------------------- SIDE MENU --------------------------------------------------- */
+
+.sideMenu {
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    background-color: #141414;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform .03s ease-in;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    padding-top: 2rem;
+}
+
+.menuItemHeader {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menuItemHeader.active {
+    opacity: .6;
+}
+
+.sideMenu a {
+    text-decoration: none;
+    color: white;
+}
+
+.sideMenuItem {
+    width: 80%;
+    border-top: solid 1.5px #2c2c2c;
+}
+
+.sideMenuItem:first-child {
+    border-top: none; /* Removes top border for the first item */
+}
+
+.noSubItems {
+    padding: 12px;
+}
+
+.chevronContainer {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #212121; /* Light grey background */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for color and flip */
+}
+
+.chevronContainer.active {
+    background-color: #1D88C6;
+    transform: rotate(180deg);
+}
+
+.chevronContainer img {
+    display: block; /* Ensures the image does not have extra space around it */
+    max-height: 100%; /* Ensures the image does not exceed the container size */
+    max-width: 100%; /* Ensures the image does not exceed the container size */
+}
+
+.menuLinkContainer {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc; /* Grey line under the item */
+    flex-grow: 1; /* Ensures it takes available space */
+}
+
+.sideMenu.open {
+    transform: translateX(0);
+}
+
+/* SUB MENU */
+.subMenu {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;    
+}
+
+.subItem {
+    border-top: solid 1.5px #2c2c2c;
+    padding: 1rem;
+}
+
+/* --------------------------------------------------- SEARCH MENU --------------------------------------------------- */
+
+
+.searchMenu {
+    opacity: .93;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.searchMenu.open {
+    transform: translateY(0);
+}
+
+.searchMenu i {
+    font-size: smaller;
+}
+
+.searchInput {
+    width: 80%;
+    padding: 10px;
+    font-size: larger;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+.searchInput::placeholder {
+    text-align: center;
+    font-size: larger;
+}
+
+.closeIcon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
