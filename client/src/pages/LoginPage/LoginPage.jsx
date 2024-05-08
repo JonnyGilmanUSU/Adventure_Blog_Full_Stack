@@ -25,7 +25,8 @@ function LoginPage() {
     setErrorMessage('');
     setSuccessMessage('');
     try {
-        const response = await axios.post('http://localhost:3001/login', formData)
+        // const response = await axios.post('http://localhost:3001/login', formData)
+        const response = await axios.post('https://adventureblog-nsny.onrender.com/login', formData)
         // Redirect or handle response here, such as redirecting to the login page
 
         if(response.status === 201) {

@@ -10,7 +10,8 @@ function BlogPostDetails({ data }) {
   useEffect(() => {
     const fetchBlogPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/getBlogPostDetails/${id}`);
+        // const response = await axios.get(`http://localhost:3001/getBlogPostDetails/${id}`);
+        const response = await axios.get(`https://adventureblog-nsny.onrender.com/getBlogPostDetails/${id}`);
         setBlogPost(response.data);
       } catch (error) {
         console.error('Error fetching blog post:', error);

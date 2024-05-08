@@ -58,7 +58,9 @@ function AdventureTypePage() {
     }
     const fetchBlogPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/getBlogPosts', {
+        // const response = await axios.get('http://localhost:3001/getBlogPosts'
+        const response = await axios.get('https://adventureblog-nsny.onrender.com/getBlogPosts'
+        , {
           headers: {
             'category': type
           }

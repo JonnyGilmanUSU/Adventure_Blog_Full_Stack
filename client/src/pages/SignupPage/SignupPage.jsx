@@ -23,7 +23,8 @@ function SignUpPage() {
     setErrorMessage('');
     setSuccessMessage('');
     try {
-        const response = await axios.post('http://localhost:3001/signup', formData)
+        // const response = await axios.post('http://localhost:3001/signup', formData)
+        const response = await axios.post('https://adventureblog-nsny.onrender.com/signup', formData)
         // Redirect or handle response here, such as redirecting to the login page
         console.log("Response:  ", response.data.message)
 

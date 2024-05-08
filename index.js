@@ -20,6 +20,8 @@ const store = new MongoDBStore({
     collection: 'sessions'
 });
 
+const port = process.env.PORT || 3001;
+
 
 // Initialize App
 const app = express();
@@ -64,5 +66,5 @@ app.get('*', (req, res) => res.sendFile(path.join(__dirname, '/client/build/inde
 
 mongoose.connect(MONGODB_URI)
     .then(() => {
-        app.listen(3001, () => {console.log("Server running on 3001")});
+        app.listen(port, () => {console.log(port)});
     })

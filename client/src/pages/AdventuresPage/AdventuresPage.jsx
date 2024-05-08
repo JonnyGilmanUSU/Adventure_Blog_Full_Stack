@@ -11,7 +11,8 @@ function AdventuresPage() {
   useEffect(() => {
     const fetchBlogPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/getBlogPosts');
+        // const response = await axios.get('http://localhost:3001/getBlogPosts');
+        const response = await axios.get('https://adventureblog-nsny.onrender.com/getBlogPosts');
         console.log(response.data);
         setBlogPosts(response.data.blogPosts);
         console.log(blogPosts)

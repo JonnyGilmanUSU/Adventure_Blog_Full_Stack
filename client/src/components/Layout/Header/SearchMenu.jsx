@@ -14,7 +14,9 @@ function SearchMenu({ isOpen, onClose }) {
     const handleSearch = async (event) => {
         if (event.key === 'Enter') {  // Trigger search on pressing 'Enter'
             try {
-                const response = await axios.get('http://localhost:3001/getSearchResults', { params: {search: searchInput} });
+                // const response = await axios.get('http://localhost:3001/getSearchResults'
+                const response = await axios.get('https://adventureblog-nsny.onrender.com/getSearchResults'
+                , { params: {search: searchInput} });
                 if (response.status === 200) {
                   updateSearchResults(response.data.data);
                   updateSearchInput(searchInput); 
